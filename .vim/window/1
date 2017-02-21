@@ -13,7 +13,7 @@ dd			delete line
 :nmap <keycomb> 
 	<command> 	map key to command
 :%s/WHAT/REPLACE	search and replace
-
+:so ~/.vimrc		reload vimrc
 
 
 ##windows

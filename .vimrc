@@ -26,6 +26,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'Shougo/vimshell'
 Plugin 'Shougo/vimproc'
+Plugin 'vim-scripts/dbext.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,12 +47,13 @@ filetype plugin indent on    " required
 :colorscheme gruvbox
 :set background=dark
 :set number
+:set mouse=a
 syntax on
 
 "Key mapping
 nmap <C-Y> :call WindowSwap#EasyWindowSwap()<CR>
 nmap <C-N> :set invnumber<CR>
-nmap <C-H> :vsp ~/.vim/window/1 <CR>
+nmap <C-H> :sp ~/.vim/window/1 <CR>
 
 "Systaxi
 let g:sql_type_default = "sqlserver"
