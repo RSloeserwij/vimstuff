@@ -1,0 +1,33 @@
+## THINGS TO TEACH IN SQL
+
+# Beginner
+Databases  
+	- Basic Structure 
+	- Example 1: datasource, scraper and storage
+	- Example 2: datasource, scraper and storage
+How to retrieve 
+	- Select
+	- Restrictions
+	- Where
+	- Group by
+	- Joins (Inner/Outer)
+	- Aliases
+	- Variables
+	- Primary keys
+	- Cheatsheet
+Optimizing for performance
+	- Indices
+	- Data types
+	- Know your source data
+Blow their mind
+	- Example 3: possibilities
+
+# Advanced
+- Functions
+- Stored Procedures
+- Relational DBs
+- Triggers
+- Cursors
+- Pivot
+- Recursive queries
+- Temporary Tables

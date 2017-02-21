@@ -1,0 +1,22 @@
+## ACTIONS
+:e 			open
+:w			save
+:x			save and exit
+:q 			exit
+! 			override
+dd			delete line
+
+
+##commands
+:set number		linenumbers
+:set nonumber		no linenumbers
+
+:%s/WHAT/REPLACE	search and replace
+
+:%!python -m json.tool	parse json files
+
+##windows
+:sp			split screen horizontally
+:vsp 			split screen vertically
+^ww			next screen
+^wp			last screen	
