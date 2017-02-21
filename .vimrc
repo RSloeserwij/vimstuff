@@ -48,6 +48,7 @@ filetype plugin indent on    " required
 "Key mapping
 nmap <C-Q> :call WindowSwap#EasyWindowSwap()<CR>
 nmap <C-N> :set invnumber<CR>
+nmap <C-H> :vsp ~/.vim/window/1 <CR>
 
 "Systaxi
 let g:sql_type_default = "sqlserver"
