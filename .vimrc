@@ -44,9 +44,10 @@ filetype plugin indent on    " required
 :colorscheme gruvbox
 :set background=dark
 :set number
+:set syn on
 
 "Key mapping
-nmap <C-Q> :call WindowSwap#EasyWindowSwap()<CR>
+nmap <C-Y> :call WindowSwap#EasyWindowSwap()<CR>
 nmap <C-N> :set invnumber<CR>
 nmap <C-H> :vsp ~/.vim/window/1 <CR>
 
