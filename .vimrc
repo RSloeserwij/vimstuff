@@ -44,7 +44,7 @@ filetype plugin indent on    " required
 :colorscheme gruvbox
 :set background=dark
 :set number
-:set syn on
+syntax on
 
 "Key mapping
 nmap <C-Y> :call WindowSwap#EasyWindowSwap()<CR>
