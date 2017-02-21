@@ -24,6 +24,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'morhetz/gruvbox'
 Plugin 'wesQ3/vim-windowswap'
+Plugin 'Shougo/vimshell'
+Plugin 'Shougo/vimproc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
