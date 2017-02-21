@@ -10,13 +10,15 @@ dd			delete line
 ##commands
 :set number		linenumbers
 :set nonumber		no linenumbers
-
+:nmap <keycomb> 
+	<command> 	map key to command
 :%s/WHAT/REPLACE	search and replace
 
-:%!python -m json.tool	parse json files
+
 
 ##windows
 :sp			split screen horizontally
 :vsp 			split screen vertically
 ^ww			next screen
 ^wp			last screen	
+^q			screen swap
