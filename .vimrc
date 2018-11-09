@@ -9,15 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
@@ -27,6 +19,14 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'Shougo/vimshell'
 Plugin 'Shougo/vimproc'
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/Tabmerge'
+
+" Java
+Plugin 'scrooloose/nerdtree'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,12 +48,34 @@ filetype plugin indent on    " required
 :set background=dark
 :set number
 :set mouse=a
+:set nowrap
 syntax on
 
 "Key mapping
 nmap <C-Y> :call WindowSwap#EasyWindowSwap()<CR>
-nmap <C-N> :set invnumber<CR>
-nmap <C-H> :sp ~/.vim/window/1 <CR>
+nmap <C-d> :NERDTreeToggle<CR>
+nmap <F7> :tabp<CR>
+nmap <F8> :tabn<CR>
+
+
 
 "Systaxi
-let g:sql_type_default = "sqlserver"
+let g:sql_type_default = "sqlinformix"
+
+"tabs
+set tabstop=2
+set softtabstop=0 noexpandtab
+set shiftwidth=2
+set smarttab
+
+"commands
+command Apps1 :e scp://rsloeserwij@145APPS01/~/
+command Apps2 :e scp://rsloeserwij@145APPS02/~/
+command Apps3 :e scp://rsloeserwij@145APPS03/~/
+command Dbs02 :e scp://rsloeserwij@145DBS02/~/
+
+"This command will insert the text in ~/.vim/header into the current buffer
+"At the position of the cursor
+command Header :r ~/.vim/header
+command SanitizeHex :%s/\d[0-9a-f]\s.\s//g
+

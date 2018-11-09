@@ -1,11 +1,15 @@
 ## ACTIONS
 :e 			open
+:enew 	open new file
 :w			save
 :x			save and exit
 :q 			exit
 ! 			override
 dd			delete line
 
+## MOUSE
+:set mouse=r	set the mouse to window mode
+:set mouse=a  set the mouse to all mode
 
 ##commands
 :set number		linenumbers

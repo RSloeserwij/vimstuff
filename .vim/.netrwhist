@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/roy'
-let g:netrw_dirhist_2='/home'
-let g:netrw_dirhist_3='/'
-let g:netrw_dirhist_4='/home/roy'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='scp://rsloeserwij@145APPS02/~/'
+let g:netrw_dirhist_2='scp://rsloeserwij@145APPS02/'
+let g:netrw_dirhist_3='scp://rsloeserwij@145APPS02/.cache/'
+let g:netrw_dirhist_4='scp://rsloeserwij@145APPS02/repos/'
+let g:netrw_dirhist_5='scp://rsloeserwij@145APPS02/repos/docker/'
+let g:netrw_dirhist_6='scp://rsloeserwij@145APPS02/repos/docker/mediawiki/'
+let g:netrw_dirhist_7='/home/rsloeserwij'
