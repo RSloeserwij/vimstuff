@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #ENSURE UPDATED VUNDLE.VIM
-git submodules update --init --recursive
+git submodule update --init --recursive
 
 #BACKUP OLD FILES
 if [ -e ~/.vimrc ]; then
