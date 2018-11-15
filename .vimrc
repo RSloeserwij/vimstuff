@@ -16,8 +16,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'morhetz/gruvbox'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'Shougo/vimshell'
-Plugin 'Shougo/vimproc'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -67,12 +65,6 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=2
 set smarttab
-
-"commands
-command Apps1 :e scp://rsloeserwij@145APPS01/~/
-command Apps2 :e scp://rsloeserwij@145APPS02/~/
-command Apps3 :e scp://rsloeserwij@145APPS03/~/
-command Dbs02 :e scp://rsloeserwij@145DBS02/~/
 
 "This command will insert the text in ~/.vim/header into the current buffer
 "At the position of the cursor
