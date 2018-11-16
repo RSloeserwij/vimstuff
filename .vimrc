@@ -65,6 +65,7 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=2
 set smarttab
+set visualbell
 
 "This command will insert the text in ~/.vim/header into the current buffer
 "At the position of the cursor
