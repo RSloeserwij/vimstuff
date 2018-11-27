@@ -1,0 +1,5 @@
+#ignore installed plugins
+.vim/bundle/*
+
+# don't ignore Vundle.vim
+!.vim/bundle/Vundle.vim
