@@ -68,12 +68,6 @@ set softtabstop=0 noexpandtab
 set shiftwidth=2
 set smarttab
 
-"commands
-command Apps1 :e scp://rsloeserwij@145APPS01/~/
-command Apps2 :e scp://rsloeserwij@145APPS02/~/
-command Apps3 :e scp://rsloeserwij@145APPS03/~/
-command Dbs02 :e scp://rsloeserwij@145DBS02/~/
-
 "This command will insert the text in ~/.vim/header into the current buffer
 "At the position of the cursor
 command Header :r ~/.vim/header
