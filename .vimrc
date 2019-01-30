@@ -16,8 +16,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'morhetz/gruvbox'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'Shougo/vimshell'
-Plugin 'Shougo/vimproc'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
