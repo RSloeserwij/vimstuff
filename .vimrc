@@ -53,6 +53,7 @@ syntax on
 "Key mapping
 nmap <C-Y> :call WindowSwap#EasyWindowSwap()<CR>
 nmap <C-d> :NERDTreeToggle<CR>
+nmap <F6> gg=G<C-o><C-o>
 nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap <F9> :call utils#Execute()<CR>
