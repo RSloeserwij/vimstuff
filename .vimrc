@@ -51,7 +51,7 @@ filetype plugin indent on    " required
 syntax on
 
 "Key mapping
-inoremap jk <esc>
+inoremap jj <esc>
 nmap <C-Y> :call WindowSwap#EasyWindowSwap()<CR>
 nmap <C-d> :NERDTreeToggle<CR>
 nmap <F6> gg=G<C-o><C-o>
