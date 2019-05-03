@@ -3,3 +3,6 @@
 
 # don't ignore Vundle.vim
 !.vim/bundle/Vundle.vim
+
+# ignore any swap files made by vim
+**.swp
