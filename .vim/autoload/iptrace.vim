@@ -7,7 +7,7 @@ if !has("python3")
 endif
 
 python3 << endpython
-import vim
+import vim, re, subprocess
 from requests import get
 
 def getInfoOfIP( ip ):
@@ -15,18 +15,41 @@ def getInfoOfIP( ip ):
 	r = get('http://api.hostip.info/get_html.php?ip='+ip)
 	return r.text
 
-def getWordUnderCursor():
-	return vim.eval("expand('<cWORD>')")
+def getIPUnderCursor():
+	txt = vim.eval("expand('<cWORD>')")
+	regex = r"((?'ip4'(\d{1,3}\.){3}\d{1,3})|(?'ip6'(([0-9a-f]{1,4})?:){7}[0-9a-f]{4}?))"
+	if re.match(regex,txt) is not None:
+ 		return txt
+	else:
+	 	return None
+		
 
 def lookupIPUnderCursor():
-	ip = getWordUnderCursor()
-	print('Looking up ' + ip + '...')
-	result = getInfoOfIP( ip )
-	vim.command( "redraw" ) # discard previous messages
-	print(result)
+	ip = getIPUnderCursor()
+	if ip is None:
+		print('word under cursor is not a valid ip4/ip6 address')
+	else:
+		print('Looking up ' + ip + '...')
+		result = getInfoOfIP( ip )
+		vim.command( "redraw" ) # discard previous messages
+		print(result)
+
+def traceIPRoute():
+	ip = getIPUnderCursor()
+	if ip is None:
+		print('word under cursor is not a valid ip4/ip6 address')
+	else:
+		print('Tracing ' + ip + '...')
+		result = subprocess.call('traceroute '+ ip, shell=True)
+		vim.command( "redraw" ) # discard previous messages
+		print(result)
 
 endpython
 
-fun! iptrace#getInfo()
+fun! iptrace#Info()
 	exec "python3 lookupIPUnderCursor()"
+endfunctio
+" return a trace route of the ip under the cursor 8.8.8.8
+fun! iptrace#Trace()
+	exec "python3 traceIPRoute()"
 endfunction
