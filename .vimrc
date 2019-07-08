@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/Tabmerge'
 Plugin 'hashivim/vim-terraform'
+Plugin 'chase/vim-ansible-yaml'
 
 " Java
 Plugin 'scrooloose/nerdtree'
