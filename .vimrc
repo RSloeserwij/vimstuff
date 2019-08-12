@@ -45,7 +45,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "Basic Settings
-:colorscheme gruvbox
+":colorscheme gruvbox
 :set background=dark
 :set number
 :set mouse=a

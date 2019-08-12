@@ -26,3 +26,6 @@ cp .vimrc ~/.vimrc
 #INSTALL PACKAGES INTO VIM
 vim "+VundleInstall" "+q" "+q"
 
+#ENABLE grubox AS THEM
+sed -i ~/.vimrc 's/":colorscheme gruvbox/:colorscheme gruvbox/g/'
+
