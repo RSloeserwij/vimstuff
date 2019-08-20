@@ -1,1 +1,1 @@
-au! BufNewFile,BufRead *.yaml,*.yml setf yaml
+au! BufNewFile,BufRead *.yaml,*.yml setf ansible.yaml

@@ -23,6 +23,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/Tabmerge'
 Plugin 'hashivim/vim-terraform'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'jnurmine/Zenburn'
 
 " Java
 Plugin 'scrooloose/nerdtree'
@@ -45,8 +46,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "Basic Settings
-":colorscheme gruvbox
+:colorscheme gruvbox
+:set t_Co=256
 :set background=dark
+:set cursorline
 :set number
 :set mouse=a
 :set nowrap
