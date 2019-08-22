@@ -15,9 +15,11 @@ Plugin 'airblade/vim-gitgutter'
 " SYNTAX
 Plugin 'scrooloose/syntastic'
 Plugin 'chase/vim-ansible-yaml'		" ansible-yaml syntax/ftdetect/ftplugin
+Plugin 'Yggdroot/indentLine'			" show identation lines
 
 " COLORSCHEME
 Plugin 'morhetz/gruvbox'
+Plugin 'guns/xterm-color-table.vim'
 
 " VIM MANAGEMENT
 Plugin 'scrooloose/nerdtree'			" file-tree
@@ -48,6 +50,16 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+"Basic Settings
+:set t_Co=256
+:set background=dark
+:set cursorline
+:set number
+:set mouse=a
+:set nowrap
+syntax on
+
 "Custom Visual Settings
 try
 	:colorscheme gruvbox
@@ -70,14 +82,10 @@ catch
 	echo "failed to configure syntastic"
 endtry
 
-"Basic Settings
-:set t_Co=256
-:set background=dark
-:set cursorline
-:set number
-:set mouse=a
-:set nowrap
-syntax on
+"Custom indentLine Settings
+let g:indentLine_color_term = 238
+let g:indentLine_char = '┊'
+
 
 "Key mapping
 inoremap jj <esc>
