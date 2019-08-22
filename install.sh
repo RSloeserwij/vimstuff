@@ -19,9 +19,15 @@ if [ -d ~/.vim ]; then
 	mv ~/.vim ~/.vim_old
 fi
 
+if [ -e ~/.ctags ]; then
+	echo "OLD .ctags FOUND, MOVING TO .vim_old/.ctags"
+	mv ~/.ctags	~/.vim_old/.ctags
+fi
+			
 #COPY NEW SETTINGS
 cp -r .vim ~/.vim
 cp .vimrc ~/.vimrc
+cp conf/.ctags ~/.ctags
 
 #INSTALL PACKAGES INTO VIM
 vim "+VundleInstall" "+q" "+q"
