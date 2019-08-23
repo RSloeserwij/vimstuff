@@ -1,5 +1,16 @@
 let $VIMHOME= $HOME."/.vim"
 
+function! ft#has_single()
+	if (&filetype =~ "\.")
+		return 0
+	elseif (&filetype == "")
+		return 0
+	else
+		return 1
+	endif
+endfunction
+
+
 function! ft#has_multiple()
 	if (&filetype =~ "\.")
 		return 1
@@ -22,3 +33,4 @@ function! ft#has_plugin(...)
 	let a:ft = get(a:, 1, &filetype)
 	return filereadable($VIMHOME."/ftplugin/".a:ft.".vim")
 endfunction
+
