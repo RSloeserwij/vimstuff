@@ -36,8 +36,8 @@ cp -r src/syntax ~/.vim
 cp -r src/window ~/.vim
 cp -r src/Vundle.vim ~/.vim
 
-cp conf/.vimrc ~/.vimrc
-cp conf/.ctags ~/.ctags
+cp conf/vimrc ~/.vimrc
+cp conf/ctags ~/.ctags
 
 #INSTALL PACKAGES INTO VIM
 vim "+VundleInstall" "+q" "+q"

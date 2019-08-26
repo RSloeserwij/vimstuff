@@ -1,0 +1,32 @@
+Usage: ./configure [OPTION]..."
+Preconfigure the vim configuration to suit your wishes.
+
+Use one of the predefined sets to make life easy:
+  ./configure   light   light installation optimized for singe-window work
+  ./configure	full    full installation including all the plugins
+
+ARGUMENTS:
+
+-h, --help      printout this instruction
+-v, --verbose   increase the amount that is printed during this configuration
+
+Plugin Control
+-a, --all       install all available plugins
+-i, --include   include the following plugins, delimited by a comma.
+                cannot be used with --all
+-x, --exclude   exclude the following plugins, delimited by a comma.
+                only in combination with --all
+
+Directory Control
+-d, --dir       directory to install .vim folder and .vimrc
+                defaults to $HOME
+-b, --backup    backup the current .vim folder to the following directory
+                defaults to $HOME/.vim_old
+    --no_backup do not take a backup of any existing configuration
+
+Dependency Control
+-p, --prompt    prompt user if a dependency is needed for a plugin
+                default = "yes"
+-y, --yes       install all dependencies needed for the plugins
+-n, --no        do not install any dependecies needed for plugins
+
