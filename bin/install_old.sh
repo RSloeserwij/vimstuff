@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #ENSURE UPDATED VUNDLE.VIM
 git submodule update --init --recursive
@@ -27,14 +27,14 @@ fi
 #COPY NEW SETTINGS
 
 ## CREATE .vim folder and copy things in
-mkdir -p ~/.vim
-cp -r autoload ~/.vim
-cp -r bundle ~/.vim
-cp -r ftdetect ~/.vim
-cp -r ftplugin ~/.vim
-cp header ~/.vim
-cp -r syntax ~/.vim
-cp -r window ~/.vim
+mkdir -p ~/.vim/bundle
+
+cp -r src/autoload ~/.vim
+cp -r src/ftdetect ~/.vim
+cp -r src/ftplugin ~/.vim
+cp -r src/syntax ~/.vim
+cp -r src/window ~/.vim
+cp -r src/Vundle.vim ~/.vim
 
 cp conf/.vimrc ~/.vimrc
 cp conf/.ctags ~/.ctags
@@ -42,6 +42,4 @@ cp conf/.ctags ~/.ctags
 #INSTALL PACKAGES INTO VIM
 vim "+VundleInstall" "+q" "+q"
 
-#ENABLE gruvbox AS COLORSCHEME
-sed -i 's/":colorscheme/:colorscheme/g' ~/.vimrc
 
