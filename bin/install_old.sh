@@ -25,8 +25,18 @@ if [ -e ~/.ctags ]; then
 fi
 			
 #COPY NEW SETTINGS
-cp -r .vim ~/.vim
-cp .vimrc ~/.vimrc
+
+## CREATE .vim folder and copy things in
+mkdir -p ~/.vim
+cp -r autoload ~/.vim
+cp -r bundle ~/.vim
+cp -r ftdetect ~/.vim
+cp -r ftplugin ~/.vim
+cp header ~/.vim
+cp -r syntax ~/.vim
+cp -r window ~/.vim
+
+cp conf/.vimrc ~/.vimrc
 cp conf/.ctags ~/.ctags
 
 #INSTALL PACKAGES INTO VIM
