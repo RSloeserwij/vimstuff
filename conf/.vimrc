@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -106,7 +106,5 @@ set softtabstop=0 noexpandtab
 set shiftwidth=2
 set smarttab
 
-"This command will insert the text in ~/.vim/header into the current buffer
-"At the position of the cursor
 command! SanitizeHex :%s/\d[0-9a-f]\s.\s//g
 command! SudoWrite :w !sudo dd of=%
