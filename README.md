@@ -22,4 +22,5 @@ These settings include the following plugins:
 The contents of this repository can be deployed by running install.sh in the top directory of the repository.
 This will move the old .vimrc file and .vim directory into a vim_old directory in the home folder.
 If this operation is done twice, the first .vimrc and .vim will be overwritten.
-  
+
+# plugin directory  

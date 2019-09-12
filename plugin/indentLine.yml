@@ -1,0 +1,5 @@
+identLine:
+  vundle_location: 'Yggdroot/indentLine'
+  default_config:
+    g:indentLine_color_term: 238
+    g:indentLine_char: '|'
