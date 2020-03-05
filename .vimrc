@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-Plugin 'VundleVim/Vundle.vim' 
+Plugin 'VundleVim/Vundle.vim'
 
 " GIT
 Plugin 'tpope/vim-fugitive'
@@ -54,6 +54,7 @@ filetype plugin indent on    " required
 "Basic Settings
 :set t_Co=256
 :set background=dark
+:set ttymouse=xterm2
 :set cursorline
 :set number
 :set mouse=a
@@ -75,9 +76,20 @@ try
 	set statusline+=%*
 
 	let g:syntastic_always_populate_loc_list=1
-	let g:syntastic_auto_loc_list=1
+	let g:syntastic_loc_list_height=5
+	let g:syntastic_auto_loc_list=0
 	let g:syntastic_check_on_open=1
-	let g:syntastic_check_on_wq=0
+	let g:syntastic_check_on_wq=1
+
+	let g:syntastic_error_symbol = 'X'
+	let g:syntastic_style_error_symbol = '⁉️'
+	let g:syntastic_warning_symbol = '⚠️'
+	let g:syntastic_style_warning_symbol = '💩'
+
+	highlight link SyntasticErrorSign SignColumn
+	highlight link SyntasticWarningSign SignColumn
+	highlight link SyntasticStyleErrorSign SignColumn
+	highlight link SyntasticStyleWarningSign SignColumn
 catch
 	echo "failed to configure syntastic"
 endtry
@@ -96,6 +108,10 @@ nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap <F9> :call utils#Execute()<CR>
 
+nnoremap <C-M-LEFT> 	<C-W><C-H>
+nnoremap <C-M-UP>			<C-W><C-K>
+nnoremap <C-M-DOWN>		<C-W><C-J>
+nnoremap <C-M-RIGHT> 	<C-W><C-L>
 
 "Systaxi
 let g:sql_type_default = "sqlinformix"
